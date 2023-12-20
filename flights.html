@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/flights.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Рейсы - ДОМОСЕДОВО</title>
+</head>
+
+<div>
+
+    <div class="header-container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/airport_icon.png">
+                </div>
+                <div class="airport-name">
+                    <span class="ru">Домоседово</span>
+                    <span class="en" style="display:none;">Domosedovo</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><span class="ru">Главная</span><span class="en" style="display:none;">Flights</span></a></li>
+                    <li><a href="flights.html"><span class="ru">Рейсы</span><span class="en" style="display:none;">Flights</span></a></li>
+                    <li><a href="#news"><span class="ru">Как добраться</span><span class="en" style="display:none;">How to get there</span></a></li>
+                    <li class="language-container">
+                        <div class="language-button" onclick="toggleLanguageMenu()">RU</div>
+                        <div class="language-menu">
+                            <div class="language-menu-item RU selected" onclick="changeLanguage('RU')">Русский</div>
+                            <div class="language-menu-item EN" onclick="changeLanguage('EN')">English</div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+    </div>
+
+    <div class="flights-container">
+        <div class="tab-buttons" data-aos="zoom-in">
+            <button class="tab-button" style="margin-left: 5%" onclick="showFlights('departures')">Вылет</button>
+            <button class="tab-button" onclick="showFlights('arrivals')">Прилет</button>
+        </div>
+
+        <div class="search-container" data-aos="fade-up" data-aos-duration="8000">
+            <img src="images/search-icon.png" alt="Search icon">
+            <input type="text" placeholder="Поиск рейса, города и авиакомпании">
+        </div>
+
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="8000">
+    <div data-aos="fade-center" class="animated-header">
+    <div class="flight-block; flight-block departure">
+        <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">00:05</div>
+            <div class="flight-destination">Минск</div>
+            <div class="flight-number">1834</div>
+            <div class="flight-terminal">C 131</div>
+            <div class="flight-arrival">Прибыл в Минск 01:19</div>
+        </div>
+        </a>
+    </div>
+    <!-- Второй рейс -->
+    <div class="flight-block; flight-block departure">
+        <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">12:30</div>
+            <div class="flight-destination">Париж</div>
+            <div class="flight-number">2345</div>
+            <div class="flight-terminal">A 102</div>
+            <div class="flight-arrival">Прибыл в Париж 15:45</div>
+        </div>
+    </a>
+    </div>
+
+    <!-- Третий рейс -->
+    <div class="flight-block; flight-block departure">
+        <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">08:15</div>
+            <div class="flight-destination">Лондон</div>
+            <div class="flight-number">7890</div>
+            <div class="flight-terminal">B 215</div>
+            <div class="flight-arrival">Прибыл в Лондон 11:30</div>
+        </div>
+    </a>
+    </div>
+
+    <!-- Пятый рейс -->
+<div class="flight-block departure">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">16:45</div>
+            <div class="flight-destination">Берлин</div>
+            <div class="flight-number">5678</div>
+            <div class="flight-terminal">D 215</div>
+            <div class="flight-arrival">Прибыл в Берлин 19:30</div>
+        </div>
+    </a>
+</div>
+
+<!-- Шестой рейс -->
+<div class="flight-block departure">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">09:00</div>
+            <div class="flight-destination">Рим</div>
+            <div class="flight-number">9876</div>
+            <div class="flight-terminal">B 345</div>
+            <div class="flight-arrival">Прибыл в Рим 12:15</div>
+        </div>
+    </a>
+</div>
+
+<!-- Седьмой рейс -->
+<div class="flight-block departure">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">13:20</div>
+            <div class="flight-destination">Амстердам</div>
+            <div class="flight-number">2468</div>
+            <div class="flight-terminal">A 512</div>
+            <div class="flight-arrival">Прибыл в Амстердам 16:45</div>
+        </div>
+    </a>
+</div>
+
+<!-- Восьмой рейс -->
+<div class="flight-block departure">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">18:30</div>
+            <div class="flight-destination">Мюнхен</div>
+            <div class="flight-number">1357</div>
+            <div class="flight-terminal">C 731</div>
+            <div class="flight-arrival">Прибыл в Мюнхен 21:15</div>
+        </div>
+    </a>
+</div>
+
+<!-- Девятый рейс -->
+<div class="flight-block departure">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">22:10</div>
+            <div class="flight-destination">Стокгольм</div>
+            <div class="flight-number">1029</div>
+            <div class="flight-terminal">B 624</div>
+            <div class="flight-arrival">Прибыл в Стокгольм 01:25</div>
+        </div>
+    </a>
+</div>
+
+<!-- Десятый рейс -->
+<div class="flight-block departure">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">05:45</div>
+            <div class="flight-destination">Варшава</div>
+            <div class="flight-number">3142</div>
+            <div class="flight-terminal">D 918</div>
+            <div class="flight-arrival">Прибыл в Варшаву 08:30</div>
+        </div>
+    </a>
+</div>
+
+
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">16:45</div>
+            <div class="flight-destination">Берлин</div>
+            <div class="flight-number">5678</div>
+            <div class="flight-terminal">D 305</div>
+            <div class="flight-arrival">Ожидается в Берлин 19:30</div>
+        </div>
+    </a>
+</div>
+
+<!-- Шестнадцатый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">21:15</div>
+            <div class="flight-destination">Рим</div>
+            <div class="flight-number">9012</div>
+            <div class="flight-terminal">F 412</div>
+            <div class="flight-arrival">Ожидается в Рим 23:45</div>
+        </div>
+    </a>
+</div>
+
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">08:30</div>
+            <div class="flight-destination">Амстердам</div>
+            <div class="flight-number">1234</div>
+            <div class="flight-terminal">B 567</div>
+            <div class="flight-arrival">Ожидается в Амстердам 10:45</div>
+        </div>
+    </a>
+</div>
+
+<!-- Восемнадцатый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">12:15</div>
+            <div class="flight-destination">Мадрид</div>
+            <div class="flight-number">7890</div>
+            <div class="flight-terminal">C 891</div>
+            <div class="flight-arrival">Ожидается в Мадрид 15:00</div>
+        </div>
+    </a>
+</div>
+
+<!-- Девятнадцатый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">16:00</div>
+            <div class="flight-destination">Варшава</div>
+            <div class="flight-number">2345</div>
+            <div class="flight-terminal">A 678</div>
+            <div class="flight-arrival">Ожидается в Варшаву 18:30</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцатый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">19:45</div>
+            <div class="flight-destination">Стокгольм</div>
+            <div class="flight-number">5678</div>
+            <div class="flight-terminal">D 910</div>
+            <div class="flight-arrival">Ожидается в Стокгольм 22:00</div>
+        </div>
+    </a>
+</div>
+
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">09:45</div>
+            <div class="flight-destination">Франкфурт</div>
+            <div class="flight-number">3456</div>
+            <div class="flight-terminal">A 123</div>
+            <div class="flight-arrival">Ожидается в Франкфурт 12:00</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать третий рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">13:20</div>
+            <div class="flight-destination">Копенгаген</div>
+            <div class="flight-number">6789</div>
+            <div class="flight-terminal">B 456</div>
+            <div class="flight-arrival">Ожидается в Копенгаген 15:35</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать четвертый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">17:10</div>
+            <div class="flight-destination">Мюнхен</div>
+            <div class="flight-number">1234</div>
+            <div class="flight-terminal">C 789</div>
+            <div class="flight-arrival">Ожидается в Мюнхен 19:25</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать пятый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">20:45</div>
+            <div class="flight-destination">Барселона</div>
+            <div class="flight-number">5678</div>
+            <div class="flight-terminal">D 012</div>
+            <div class="flight-arrival">Ожидается в Барселону 23:00</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать шестой рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">22:00</div>
+            <div class="flight-destination">Рим</div>
+            <div class="flight-number">9012</div>
+            <div class="flight-terminal">F 345</div>
+            <div class="flight-arrival">Ожидается в Рим 00:15</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать седьмой рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">23:30</div>
+            <div class="flight-destination">Вена</div>
+            <div class="flight-number">2345</div>
+            <div class="flight-terminal">A 678</div>
+            <div class="flight-arrival">Ожидается в Вену 01:45</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать восьмой рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">01:15</div>
+            <div class="flight-destination">Прага</div>
+            <div class="flight-number">3456</div>
+            <div class="flight-terminal">B 910</div>
+            <div class="flight-arrival">Ожидается в Прагу 03:30</div>
+        </div>
+    </a>
+</div>
+
+<!-- Двадцать девятый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">03:45</div>
+            <div class="flight-destination">Хельсинки</div>
+            <div class="flight-number">6789</div>
+            <div class="flight-terminal">C 111</div>
+            <div class="flight-arrival">Ожидается в Хельсинки 06:00</div>
+        </div>
+    </a>
+</div>
+
+<!-- Тридцатый рейс -->
+<div class="flight-block arrival">
+    <a href="payment.html" class="flight-link">
+        <div class="flight-info">
+            <div class="flight-time">05:30</div>
+            <div class="flight-destination">Осака</div>
+            <div class="flight-number">0123</div>
+            <div class="flight-terminal">D 234</div>
+            <div class="flight-arrival">Ожидается в Осаку 08:45</div>
+        </div>
+    </a>
+</div>
+    </div>
+
+
+</div>
+
+<!-- ... (ваш предыдущий код) -->
+
+<div class="flights-container">
+    <!-- ... (ваш предыдущий код) -->
+</div>
+
+<!-- Добавляем контактные данные в самый низ страницы -->
+<div class="contact-info">
+    <p>+7 (495) 578 65 65</p><br>
+    <p>Telegram-бот</p><br>
+    <p>Telegram-чат</p><br>
+    <p>VK</p><br>
+    <p>Telegram</p><br>
+    <p>© 2018-2023 АО «Международный аэропорт Домоседово»</p>
+</div>
+</div>
+
+
+<script src="js/flights.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+</body>
+
+</html>
+

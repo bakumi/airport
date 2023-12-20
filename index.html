@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>DOMOSEDOVO AIRLINES</title>
+</head>
+
+<body id="swup" class="transition-fade">
+
+    <div class="header-container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/airport_icon.png">
+                </div>
+                <div class="airport-name">
+                    <span class="ru">Домоседово</span>
+                    <span class="en" style="display:none;">Domosedovo</span>
+                </div>
+            </div>
+
+            <nav class="menu-nav">
+                <div>
+                <ul>
+                    <li class="flights-button"><a href="flights.html"><span class="ru">Рейсы</span><span class="en" style="display:none;">Flights</span></a></li>
+                    <li><a href="#news"><span class="ru">Как добраться</span><span class="en" style="display:none;">How to get there</span></a></li>
+                    <li class="language-container">
+                        <div class="language-button" onclick="toggleLanguageMenu()">RU</div>
+                        <div class="language-menu">
+                            <div class="language-menu-item RU selected" onclick="changeLanguage('RU')">Русский</div>
+                            <div class="language-menu-item EN" onclick="changeLanguage('EN')">English</div>
+                        </div>
+                    </li>
+                    </ul>
+            </div>
+
+            <div class="side-menu">
+                <div class="menu-buttons">
+                    <li class="language-container">
+                    <div class="language-button" onclick="toggleLanguageMenu()">RU</div>
+                    <div class="language-menu">
+                        <div class="language-menu-item RU selected" onclick="changeLanguage('RU')">Русский</div>
+                        <div class="language-menu-item EN" onclick="changeLanguage('EN')">English</div>
+                    </div>
+                    </li>
+                    <div class="close-button" onclick="closeMenu()">Закрыть</div>
+                </div>
+                <ul>
+                    <li><a href="flights.html" class="hide-on-menu-open"><span class="ru">Рейсы</span><span class="en" style="display:none;">Flights</span></a></li>
+                    <li><a href="#news"><span class="ru">Как добраться</span><span class="en" style="display:none;">How to get there</span></a></li>
+                    <!-- Добавьте другие пункты меню по необходимости -->
+                </ul>
+            </div>
+
+            <div class="menu-button" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            </nav>
+        </header>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <video autoplay muted loop>
+            <source src="videos/your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="center-text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" style="margin-left: -37%; top: 30%">
+            <span class="ru">ДОМОСЕДОВО</span>
+            <span class="en" style="display:none;">DOMOSEDOVO</span>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="buttons-section">
+            <a href="flights.html" class="button" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                <div class="button-title"><span class="ru">Вылет 🠒</span><span class="en" style="display:none;">Departure 🠒</span></div>
+                <div class="button-description"><span class="ru">Вылетающим и провожающим</span><span class="en" style="display:none;">For departures and escorts</span></div>
+            </a>
+            <a href="#" class="button" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1000">
+                <div class="button-title"><span class="ru">Прилёт 🠒</span><span class="en" style="display:none;">Arrival 🠒</span></div>
+                <div class="button-description"><span class="ru">Прилетающим и встречающим</span><span class="en" style="display:none;">For arrivals and greeters</span></div>
+            </a>
+            <a href="#" class="button" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="2000">
+                <div class="button-title"><span class="ru">Пересадка 🠒</span><span class="en" style="display:none;">Transfer 🠒</span></div>
+                <div class="button-description"><span class="ru">Совершающим пересадку</span><span class="en" style="display:none;">For those making transfers</span></div>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Information Blocks Section -->
+    <section id="flights" class="information-section">
+        <div class="flight-info">
+            <!-- Display current flights and schedule information -->
+        </div>
+        <div class="services-info">
+            <!-- Display information about airport services -->
+        </div>
+        <div class="news-info">
+            <!-- Display latest news and updates -->
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <!-- Add a booking form or link to the booking page -->
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Display contact information -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <!-- Remove or comment out the following lines -->
+            <!-- <a href="#privacy-policy">Privacy Policy</a> -->
+            <!-- <a href="#terms">Terms of Use</a> -->
+        </div>
+        <div class="social-links">
+            <!-- Add links to social media profiles -->
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguageMenu() {
+    var languageMenu = document.querySelector('.language-menu');
+    languageMenu.classList.toggle('open');
+}
+
+document.addEventListener('click', function(event) {
+    var languageMenu = document.querySelector('.language-menu');
+    var languageButton = document.querySelector('.language-button');
+
+    if (!languageMenu.contains(event.target) && !languageButton.contains(event.target)) {
+        languageMenu.classList.remove('open');
+    }
+});
+
+function changeLanguage(language) {
+    var languageButton = document.querySelector('.language-button');
+    var selectedLanguageItem = document.querySelector('.language-menu-item.selected');
+    if (selectedLanguageItem) {
+        selectedLanguageItem.classList.remove('selected');
+    }
+
+    var elementsRU = document.querySelectorAll('.ru');
+    var elementsEN = document.querySelectorAll('.en');
+
+    elementsRU.forEach(function (el) {
+        el.style.display = (language === 'RU') ? 'inline' : 'none';
+    });
+
+    elementsEN.forEach(function (el) {
+        el.style.display = (language === 'EN') ? 'inline' : 'none';
+    });
+
+    if (language === 'RU') {
+        languageButton.textContent = 'RU';
+    } else if (language === 'EN') {
+        languageButton.textContent = 'EN';
+    }
+
+    var newSelectedLanguageItem = document.querySelector('.language-menu-item.' + language);
+    newSelectedLanguageItem.classList.add('selected');
+
+    toggleLanguageMenu(); 
+}
+
+function fadeOut() {
+    document.body.classList.add('fade-out');
+    setTimeout(function () {
+        window.location.href = "services.html"; // Измените на нужный URL
+    }, 500); // Время анимации в миллисекундах (здесь 500 мс)
+}
+    </script>
+<script src="https://unpkg.com/swup@4"></script>
+<script>
+  const swup = new Swup();
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

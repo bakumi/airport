@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.header-container {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-right: 40px; /* Увеличено значение для больших отступов между кнопками */
+}
+
+nav a {
+    user-select: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFA500;
+}
+
+.logo-container {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(300px);
+}
+
+.logo img {
+    user-select: none;
+    width: 50px;
+    height: auto;
+}
+
+.airport-name {
+    user-select: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.video-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.video-section video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.center-text {
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 42%; /* Чуть чуть левее */
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.center-text::selection {
+    background-color: #FFA500;
+    color: #fff;
+}
+/* ... Ваши предыдущие стили ... */
+
+/* ... Ваши предыдущие стили ... */
+
+/* Добавленные стили для кнопок и их описаний */
+.buttons-section {
+    user-select: none;
+    position: fixed;
+    bottom: 75px; /* Уменьшенный отступ от нижнего края */
+    left: 90px; /* Начальный отступ от левого края */
+    display: flex;
+    align-items: flex-start; /* Выравнивание по левому краю */
+    z-index: 1;
+}
+
+.button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px; /* Увеличенный размер шрифта для кнопок */
+    transition: color 0.3s ease;
+    margin-right: 40px; /* Отступ между кнопками */
+}
+
+.button:last-child {
+    margin-right: 0; /* Убираем отступ для последней кнопки */
+}
+
+.button:hover,
+.button:focus {
+    color: #FFA500;
+}
+
+/* Новый стиль для обычного состояния кнопки */
+.button:not(:hover):not(:focus) {
+    color: #fff;
+}
+
+.button-description {
+    font-size: 16px; /* Увеличенный размер шрифта для описания */
+    color: #fff;
+    font-weight: normal;
+}
+
+/* Добавленные стили для языковой кнопки и меню */
+/* Добавленные стили для языковой кнопки и меню */
+/* Дополнительные стили для кнопок и их описаний */
+/* ... Ваши предыдущие стили ... */
+
+/* Дополнительные стили для кнопок и их описаний */
+.buttons-section a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px; /* Увеличенный размер шрифта для кнопок */
+    transition: color 0.3s ease; /* Анимация изменения цвета текста */
+    margin-right: 40px; /* Отступ между кнопками */
+}
+
+.buttons-section a:hover,
+.buttons-section a:focus {
+    color: #FFA500; /* Изменение цвета текста при наведении и фокусе */
+}
+
+.button-description {
+    font-size: 16px; /* Увеличенный размер шрифта для описания */
+    color: #fff;
+    font-weight: normal;
+}
+
+/* Анимация для открытия/закрытия меню */
+.language-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.language-menu.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.language-menu-item {
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.language-menu-item:hover {
+    color: #FFA500;
+}
+
+.language-button {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    margin-right: 20px; /* Уменьшен отступ для кнопки смены языка */
+}
+
+.language-button:hover {
+    color: #FFA500;
+}
+
+.transition-fade {
+    transition: .1s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+
+
+@font-face {
+	font-family: "Roboto Condensed Light";
+	font-style: normal;
+	font-weight: 300;
+	src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url("RobotoCondensed-Light.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: "Roboto Condensed Bold";
+	font-style: normal;
+	font-weight: 700;
+	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url("RobotoCondensed-Bold.ttf") format('truetype');
+}
+
+/* ... предыдущие стили ... */
+
+/* ... Ваши существующие стили ... */
+
+.menu-button {
+    position: relative;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-left: -50px;
+}
+
+.menu-button label {
+    display: block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+}
+
+.menu-button span {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    width: 20px;
+    margin: 5px 0;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu li {
+    width: 100%;
+}
+
+.side-menu a,
+.side-menu .button,
+.side-menu .login-button {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease;
+    margin-left: 20px;
+}
+
+.side-menu a:hover,
+.side-menu .button:hover,
+.side-menu .login-button:hover,
+.side-menu a:focus,
+.side-menu .button:focus,
+.side-menu .login-button:focus {
+    color: #FFA500;
+}
+
+.side-menu .button:last-child {
+    margin-bottom: 15px; /* Добавлен отступ снизу для последней кнопки */
+}
+
+.side-menu .login-button {
+    text-decoration: none;
+    background-color: #FFA500;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.side-menu .login-button:hover,
+.side-menu .login-button:focus {
+    background-color: #fff;
+    color: #FFA500;
+}
+
+.menu-button input:checked + label + .side-menu {
+    right: 0;
+}
+
+.navigation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0); /* Добавим немного прозрачности к панели */
+    display: flex;
+    justify-content: flex-end; /* Изменено значение */
+    align-items: center;
+    padding: 10px;
+    z-index: 2; /* Убедимся, что панель навигации находится над видео */
+}
+
+.menu-nav {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.side-menu .menu-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff00; /* Цвет фона для раздела кнопок меню */
+}
+
+.side-menu .language-button,
+.side-menu .close-button {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.side-menu .close-button {
+    color: #000000; /* Цвет закрытия для выделения */
+    margin-left: 70px;
+}
+
+.side-menu .close-button:hover {
+    color: #FFA500; /* Изменение цвета при наведении */
+}
