@@ -30,15 +30,15 @@ function changeLanguage(language) {
     var newSelectedLanguageItem = document.querySelector('.language-menu-item.' + language);
     newSelectedLanguageItem.classList.add('selected');
 
-    // Закрыть меню после смены языка
+
     toggleLanguageMenu(); 
 }
 
 function fadeOut() {
     document.body.classList.add('fade-out');
     setTimeout(function () {
-        window.location.href = "services.html"; // Измените на нужный URL
-    }, 500); // Время анимации в миллисекундах (здесь 500 мс)
+        window.location.href = "services.html";
+    }, 500); 
 }
 
 
@@ -135,8 +135,8 @@ function changeLanguage(language) {
 function fadeOut() {
     document.body.classList.add('fade-out');
     setTimeout(function () {
-        window.location.href = "services.html"; // Измените на нужный URL
-    }, 500); // Время анимации в миллисекундах (здесь 500 мс)
+        window.location.href = "services.html"; 
+    }, 500); 
 }
 
 

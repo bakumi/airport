@@ -36,7 +36,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 40px; /* Увеличено значение для больших отступов между кнопками */
+    margin-right: 40px; 
 }
 
 nav a {
@@ -94,7 +94,7 @@ nav a:hover {
     user-select: none;
     position: absolute;
     top: 50%;
-    left: 42%; /* Чуть чуть левее */
+    left: 42%; 
     transform: translate(-50%, -50%);
     font-size: 200px;
     font-weight: bold;
@@ -105,18 +105,15 @@ nav a:hover {
     background-color: #FFA500;
     color: #fff;
 }
-/* ... Ваши предыдущие стили ... */
 
-/* ... Ваши предыдущие стили ... */
 
-/* Добавленные стили для кнопок и их описаний */
 .buttons-section {
     user-select: none;
     position: fixed;
-    bottom: 75px; /* Уменьшенный отступ от нижнего края */
-    left: 90px; /* Начальный отступ от левого края */
+    bottom: 75px; 
+    left: 90px; 
     display: flex;
-    align-items: flex-start; /* Выравнивание по левому краю */
+    align-items: flex-start; 
     z-index: 1;
 }
 
@@ -124,13 +121,13 @@ nav a:hover {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 32px; /* Увеличенный размер шрифта для кнопок */
+    font-size: 32px; 
     transition: color 0.3s ease;
-    margin-right: 40px; /* Отступ между кнопками */
+    margin-right: 40px; 
 }
 
 .button:last-child {
-    margin-right: 0; /* Убираем отступ для последней кнопки */
+    margin-right: 0; 
 }
 
 .button:hover,
@@ -138,44 +135,38 @@ nav a:hover {
     color: #FFA500;
 }
 
-/* Новый стиль для обычного состояния кнопки */
 .button:not(:hover):not(:focus) {
     color: #fff;
 }
 
 .button-description {
-    font-size: 16px; /* Увеличенный размер шрифта для описания */
+    font-size: 16px; 
     color: #fff;
     font-weight: normal;
 }
 
-/* Добавленные стили для языковой кнопки и меню */
-/* Добавленные стили для языковой кнопки и меню */
-/* Дополнительные стили для кнопок и их описаний */
-/* ... Ваши предыдущие стили ... */
 
-/* Дополнительные стили для кнопок и их описаний */
 .buttons-section a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 32px; /* Увеличенный размер шрифта для кнопок */
-    transition: color 0.3s ease; /* Анимация изменения цвета текста */
-    margin-right: 40px; /* Отступ между кнопками */
+    font-size: 32px; 
+    transition: color 0.3s ease; 
+    margin-right: 40px; 
 }
 
 .buttons-section a:hover,
 .buttons-section a:focus {
-    color: #FFA500; /* Изменение цвета текста при наведении и фокусе */
+    color: #FFA500; 
 }
 
 .button-description {
-    font-size: 16px; /* Увеличенный размер шрифта для описания */
+    font-size: 16px; 
     color: #fff;
     font-weight: normal;
 }
 
-/* Анимация для открытия/закрытия меню */
+
 .language-menu {
     user-select: none;
     display: none;
@@ -220,7 +211,7 @@ nav a:hover {
     font-size: 16px;
     border-radius: 5px;
     transition: color 0.3s ease;
-    margin-right: 20px; /* Уменьшен отступ для кнопки смены языка */
+    margin-right: 20px; 
 }
 
 .language-button:hover {
@@ -252,9 +243,7 @@ html.is-animating .transition-fade {
 	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url("RobotoCondensed-Bold.ttf") format('truetype');
 }
 
-/* ... предыдущие стили ... */
 
-/* ... Ваши существующие стили ... */
 
 .menu-button {
     position: relative;
@@ -330,11 +319,11 @@ html.is-animating .transition-fade {
 }
 
 .side-menu .button:last-child {
-    margin-bottom: 15px; /* Добавлен отступ снизу для последней кнопки */
+    margin-bottom: 15px; 
 }
 
 .side-menu .login-button {
-    /* Ваши текущие стили */
+   
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -359,12 +348,12 @@ html.is-animating .transition-fade {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0); /* Добавим немного прозрачности к панели */
+    background: rgba(0, 0, 0, 0); 
     display: flex;
-    justify-content: flex-end; /* Изменено значение */
+    justify-content: flex-end; 
     align-items: center;
     padding: 10px;
-    z-index: 2; /* Убедимся, что панель навигации находится над видео */
+    z-index: 2; 
 }
 
 .menu-nav {
@@ -382,7 +371,7 @@ html.is-animating .transition-fade {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #ffffff00; /* Цвет фона для раздела кнопок меню */
+    background-color: #ffffff00; 
 }
 
 .side-menu .language-button,
@@ -399,12 +388,12 @@ html.is-animating .transition-fade {
 }
 
 .side-menu .close-button {
-    color: #000000; /* Цвет закрытия для выделения */
+    color: #000000; 
     margin-left: 70px;
 }
 
 .side-menu .close-button:hover {
-    color: #FFA500; /* Изменение цвета при наведении */
+    color: #FFA500; 
 }
 
 

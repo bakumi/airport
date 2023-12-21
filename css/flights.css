@@ -38,7 +38,7 @@
     font-size: 16px;
     border-radius: 5px;
     transition: color 0.3s ease;
-    margin-right: 20px; /* Уменьшен отступ для кнопки смены языка */
+    margin-right: 20px; 
 }
 
 .language-button:hover {
@@ -47,8 +47,8 @@
 
 .flights-container {
     max-width: 800px;
-    margin: 50px 20px 0; /* Уменьшаем отступы по бокам и добавляем отступ сверху */
-    text-align: left; /* Выравнивание текста по левому краю */
+    margin: 50px 20px 0; 
+    text-align: left; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -58,7 +58,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    margin-top: 200px; /* Произвольное значение для отступа между кнопками и верхней границей .flights-container */
+    margin-top: 200px; 
 }
 
 .tab-button {
@@ -68,7 +68,7 @@
     border: none;
     background: none;
     color: black;
-    font-weight: 800; /* Изменено на normal для уменьшения ширины шрифта */
+    font-weight: 800; 
     margin-right: 20px;
     transition: color 0.3s ease;
 }
@@ -120,7 +120,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 40px; /* Увеличено значение для больших отступов между кнопками */
+    margin-right: 40px; 
 }
 
 nav a {
@@ -159,21 +159,14 @@ nav a:hover {
     margin-left: 10px;
 }
 
-
-
-/* services.css */
-
-/* ... (ваш предыдущий код) */
-
-/* Стили для строки поиска */
 .search-container {
     display: flex;
     align-items: center;
     margin: 3vw;
-    justify-content: center; /* Центрирование по горизонтали */
+    justify-content: center; 
     margin-top: 100px;
     margin-bottom: 20px;
-    width: 90vw; /* Используйте 100vw для растяжения на всю ширину видимой области */
+    width: 90vw; 
     
 }
 
@@ -199,7 +192,7 @@ nav a:hover {
 
 
 
-/* ... (ваш предыдущий код) */
+
 
 .flight-block {
     border-bottom: 1px solid black;
@@ -209,7 +202,7 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    transition: border 0.3s, transform 0.3s; /* Добавляем анимацию для границ и трансформации */
+    transition: border 0.3s, transform 0.3s; 
     border: 1px solid transparent;
 }
 
@@ -250,7 +243,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Добавленные стили для анимации */
+
 .departure-show,
 .arrival-show {
     opacity: 1;
@@ -265,26 +258,24 @@ nav a:hover {
 
 
 .flight-block:hover {
-    border-color: #000000; /* Цвет границы при наведении */
-    transform: translateY(-5px); /* Поднимаем блок на 5 пикселей вверх */
+    border-color: #000000; 
+    transform: translateY(-5px); 
     box-shadow: 4px 4px 0px 0px rgba(255, 165, 0, 1);
-    transition: box-shadow 0.4s, transform 0.4s; /* Добавляем прямоугольную тень с максимальной прозрачностью и цветом #FFA500 */
+    transition: box-shadow 0.4s, transform 0.4s; 
 }
 
 .contact-info {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; /* Выравнивание по горизонтали с равным расстоянием между элементами */
+    justify-content: space-around; 
     background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
 
-    /* Опциональные стили для более красивого вида */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
 }
 
-/* Стили для текста внутри блока */
 .contact-info p {
     margin: 10px 0;
 }

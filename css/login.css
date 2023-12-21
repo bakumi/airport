@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* Remove underlines from links */
 a {
     text-decoration: none;
 }
@@ -31,7 +30,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
 }
-/* Style the forms and hide the sign-up form initially */
 form {
     grid-column: 1 / 2;
     grid-row: 1/2;
@@ -41,7 +39,6 @@ form {
     flex-direction: column;
 }
 
-/* Style form titles, input fields, icons, and buttons */
 .title {
     font-size: 35px;
     color: #ffffff;
@@ -70,7 +67,6 @@ form {
     color: #ffffff;
     font-weight: 600;
 }
-/* Style paragraphs and links */
 p,
 
 
@@ -100,11 +96,9 @@ button{
 .account-text {
     color: #ffffff;
 }
-/* Make the sign-up form visible when in sign-up mode */
 .container.sign-up-mode form.sign-up-form {
     visibility: visible;
 }
-/* Hide the sign-in form when in sign-up mode */
 .container.sign-up-mode form.sign-in-form {
     visibility: hidden;
 }

@@ -57,7 +57,7 @@ h2 {
 .tab-buttons {
   display: flex;
   margin: 0;
-  padding: 0; /* Произвольное значение для отступа между кнопками и верхней границей .flights-container */
+  padding: 0; 
 }
 
 .tab-button {
@@ -70,7 +70,7 @@ margin-top: 100px;
   border: none;
   background: none;
   color: black;
-  font-weight: 800; /* Изменено на normal для уменьшения ширины шрифта */
+  font-weight: 800; 
   transition: color 0.3s ease;
 }
 

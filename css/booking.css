@@ -40,7 +40,7 @@ h1 i {
     width: 500px;
     margin: 0 auto;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 30px; /* Добавлено свойство для закругления углов */
+    border-radius: 30px; 
 
 }
 .hotel-reservation-form .fields {
@@ -175,7 +175,7 @@ font-weight: bold;
 color: #fff;
 cursor: pointer;
 width: 100%;
-border-radius: 15px; /* Добавлено для закругления углов */
+border-radius: 15px; 
 }
 
 .payment-button:hover {

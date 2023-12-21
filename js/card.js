@@ -45,12 +45,12 @@ validityInput.addEventListener("input", () => {
   const year = parts[0].slice(2);
   const month = parts[1];
 
-  //Final formatted string
+
   const formattedString = `${month}/${year}`;
   displayValidity.innerText = formattedString;
 });
 
-//cvv
+
 cvvInput.addEventListener("input", () => {
   const userInput = cvvInput.value;
   const sanitizedInput = userInput.slice(0, 3);
@@ -59,11 +59,11 @@ cvvInput.addEventListener("input", () => {
   cvvDisplay.innerText = numericInput;
 });
 
-//Flip
+
 cvvInput.addEventListener("click", () => {
   document.getElementById("card").style.transform = "rotateY(180deg)";
 });
-//Reflip card
+
 document.addEventListener("click", () => {
   if (document.activeElement.id != "cvv") {
     document.getElementById("card").style.transform = "rotateY(0deg)";
@@ -80,19 +80,19 @@ window.onload = () => {
 
 
 document.getElementById("payButton").addEventListener("click", function(event) {
-  // Проверка, все ли поля заполнены
+ 
   if (
     cardNumber.value.trim() === "" ||
     cardNameInput.value.trim() === "" ||
     validityInput.value.trim() === "" ||
     cvvInput.value.trim() === ""
   ) {
-    // Выводите сообщение или выполняйте другие действия при необходимости
+    
     alert("Пожалуйста, заполните все поля");
-    // Отмена действия по умолчанию (перехода по ссылке или отправки формы)
+   
     event.preventDefault();
   } else {
-    // Если все поля заполнены, происходит переход на страницу "thankful.html"
+    
     window.location.href = "thankful.html";
   }
 });
