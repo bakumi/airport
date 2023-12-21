@@ -1,0 +1,79 @@
+
+* {
+  font-family: sans-serif;
+  box-sizing: fixed;
+  margin-top: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+
+body {
+  background: #f7c41f;
+  background: radial-gradient(circle, #f7c41f 0%, #fc930a 65%);
+  display: grid;
+  place-items: center;
+  font-family: "Passion One", cursive;
+  font-weight: 700;
+  
+}
+
+.testimonial {
+  background: var(--color-red);
+  background: linear-gradient(215deg, #000000 0%, #ffffff 30%, #ffffff 70%);
+  background-size: 200% 200%;
+  padding: 200px;
+  border-radius: 20px;
+  width: 400px;
+  position: relative;
+  color: white;
+  box-shadow: 5px 5px 15px 15px rgb(0, 0, 0, 0.4);
+}
+
+
+.testimonial h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 15px;
+  color: black;
+  
+}
+
+h2 {
+  text-align: center;
+  border-radius: 70px;
+  box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.2);
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.644);
+}
+
+
+.tab-buttons {
+  display: flex;
+  margin: 0;
+  padding: 0; /* Произвольное значение для отступа между кнопками и верхней границей .flights-container */
+}
+
+.tab-button {
+margin-left: 60px;
+margin-bottom: -100px;
+margin-top: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  background: none;
+  color: black;
+  font-weight: 800; /* Изменено на normal для уменьшения ширины шрифта */
+  transition: color 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #FFA500;
+}

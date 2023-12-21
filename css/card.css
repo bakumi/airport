@@ -1,0 +1,173 @@
+* {
+  user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+}
+
+.background-text {
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    padding: 100%;
+    top: -130%;
+    left: -100%;
+    background: repeating-linear-gradient(0deg, #ffa500, #ffa500 20px, #000000d3 10px, #000000dc 50px);
+    background-size: 200% 200%;
+    color: #000;
+    transform: rotate(45deg);
+    transform-origin: 100 100;
+    z-index: -1;
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #ffa500;
+    width: 500px;
+    padding: 3em;
+    border-radius: 1em;
+    perspective: 800px;
+    box-shadow: 2px 5px 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+  .credit-card {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    margin: auto;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(#000000, #414141);
+    border-radius: 1em;
+    backface-visibility: hidden;
+  }
+  .card-front {
+    padding: 2em 1em;
+  }
+  .branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .branding img {
+    width: 50px;
+    height: auto;
+  }
+  .card-back {
+    position: absolute;
+    transform: rotateY(180deg);
+  }
+  .card-number {
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    margin-top: 3em;
+  }
+  .details {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+    font-size: 0.8em;
+  }
+  .details span {
+    display: block;
+  }
+  .details #card-holder-name {
+    text-transform: uppercase;
+  }
+  .card-back .black-strip {
+    position: relative;
+    background-color: #000000;
+    height: 50px;
+    top: 2em;
+  }
+  .card-back .white-strip {
+    top: 3em;
+    position: relative;
+    text-align: right;
+  }
+  .card-back .white-strip span {
+    margin-right: 1em;
+  }
+  .card-back .white-strip div {
+    height: 30px;
+    background-color: #ffffff;
+    margin-top: 0.5em;
+  }
+  .card-back .visa-logo {
+    position: absolute;
+    width: 50px;
+    margin-top: 4em;
+    right: 1em;
+  }
+  form {
+    margin-top: 2em;
+  }
+  label,
+  input {
+    display: block;
+  }
+  label {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  
+  label {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  input {
+    width: 100%;
+    border: 1px solid #000000;
+    padding: 1em 0.5em;
+    border-radius: 0.5em;
+  }
+  input:not(:last-child) {
+    margin-bottom: 1em;
+
+  }
+  form .date-cvv {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  #payButton {
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+    border: 0;
+    background-color: #000000;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; /* Добавлено для закругления углов */
+}
+
+#payButton:hover {
+    background-color: #ffffff;
+    color: black;
+}
+

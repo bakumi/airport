@@ -177,6 +177,7 @@ nav a:hover {
 
 /* Анимация для открытия/закрытия меню */
 .language-menu {
+    user-select: none;
     display: none;
     flex-direction: column;
     background-color: #fff;
@@ -194,6 +195,7 @@ nav a:hover {
 }
 
 .language-menu.open {
+    user-select: none;
     display: flex;
     opacity: 1;
     transform: translateY(0);
@@ -201,6 +203,7 @@ nav a:hover {
 }
 
 .language-menu-item {
+    user-select: none;
     cursor: pointer;
     padding: 5px;
     transition: color 0.3s ease;
@@ -211,6 +214,7 @@ nav a:hover {
 }
 
 .language-button {
+    user-select: none;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
@@ -330,19 +334,19 @@ html.is-animating .transition-fade {
 }
 
 .side-menu .login-button {
-    text-decoration: none;
-    background-color: #FFA500;
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    /* Ваши текущие стили */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    margin-top: auto;
+    margin-left: -10px;
 }
+
 
 .side-menu .login-button:hover,
 .side-menu .login-button:focus {
-    background-color: #fff;
+    background-color: #00000000;
     color: #FFA500;
 }
 
@@ -402,3 +406,5 @@ html.is-animating .transition-fade {
 .side-menu .close-button:hover {
     color: #FFA500; /* Изменение цвета при наведении */
 }
+
+
